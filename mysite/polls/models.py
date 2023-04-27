@@ -22,3 +22,7 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+
+    #Meta Class of the Choice Model for text uniqueness
+    class Meta:
+            unique_together = ('question', 'choice_text')
